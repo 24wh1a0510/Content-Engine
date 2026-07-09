@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <rect width="640" height="320" fill="#EFF6FF"/>
+  <circle cx="144" cy="254" r="43" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="228" cy="238" r="29" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="312" cy="222" r="15" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="396" cy="206" r="71" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="480" cy="190" r="57" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="64" cy="174" r="43" fill="#BFDBFE" opacity="0.2"/>
+<circle cx="148" cy="158" r="29" fill="#BFDBFE" opacity="0.2"/>
+
+  <rect x="0" y="0" width="6" height="320" fill="#3B82F6"/>
+  <rect x="0" y="280" width="640" height="40" fill="#3B82F6" opacity="0.08"/>
+  <text x="36" y="100" font-family="Georgia,serif" font-size="11" fill="#3B82F6" font-weight="bold" letter-spacing="3">CAMPAIGN HERO IMAGE</text>
+  <text x="36" y="165" font-family="Georgia,serif" font-size="36" fill="#1E3A8A" font-weight="bold">NovaBrew Coffee</text>
+  <text x="36" y="205" font-family="Arial,sans-serif" font-size="17" fill="#1E3A8A" opacity="0.7" font-style="italic">Fuel your focus. Brew with Nova.</text>
+  <text x="36" y="300" font-family="Arial,sans-serif" font-size="11" fill="#3B82F6" opacity="0.5">Add OPENAI_API_KEY with credits for a real DALL-E 3 image</text>
+</svg>
