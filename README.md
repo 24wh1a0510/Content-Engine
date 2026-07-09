@@ -1,113 +1,148 @@
-# ⚡ AI Content Engine
+# 🚀 Content Engine
 
-> **One Brief In → Five Creative Assets Out**
-
-A production-ready Streamlit application that turns a short product brief into a full campaign kit — tagline, blog intro, social posts, hero image, and a promotional video concept — in under 60 seconds.
-
----
+**Content Engine** is a multimodal AI-powered content generation application built with **Streamlit**. It transforms a simple product brief into a complete marketing campaign by generating high-quality text, images, and videos using multiple AI models.
 
 ## ✨ Features
 
-| Asset | Provider |
-|---|---|
-| 💡 Campaign Tagline | Claude (Anthropic) |
-| 📰 Blog Introduction (~200 words) | Claude (Anthropic) |
-| 📲 Social Posts (Twitter · Instagram · LinkedIn) | Claude (Anthropic) |
-| 🎨 Hero Image | DALL-E 3 (OpenAI) or Stability AI |
-| 🎬 Promotional Video Concept | Claude (Anthropic) |
+* 📝 AI-generated Campaign Tagline
+* 📖 200-word Blog Introduction
+* 📱 Social Media Posts
+
+  * Twitter/X
+  * Instagram
+  * LinkedIn
+* 🎨 AI-generated Hero Image
+* 🎬 AI-generated Promotional Video
+* ⚡ One-click generation from a single product brief
 
 ---
 
-## 🚀 Quick Start
+## 🏗️ Tech Stack
 
-### 1. Clone / download the project
-
-```bash
-git clone <your-repo-url>
-cd content_engine
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure API keys
-
-```bash
-cp .env.example .env
-# Open .env and paste your Anthropic and OpenAI API keys
-```
-
-### 4. Run the app
-
-```bash
-streamlit run app.py
-```
-
-Open [http://localhost:8501](http://localhost:8501) in your browser.
+* **Frontend:** Streamlit
+* **Language:** Python 3.11+
+* **Framework:** Streamlit
+* **LLM Provider:** OpenRouter API
+* **Image Generation:** OpenAI GPT Image API
+* **Video Generation:** Alibaba Wan 2.6 Model
+* **Environment Management:** python-dotenv
 
 ---
 
-## 🗂️ Project Structure
+## 📂 Project Structure
 
-```
+```text
 content_engine/
 │
-├── app.py          ← Streamlit UI — layout, state, progress
-├── text_gen.py     ← All Claude text generation (tagline, blog, social, video concept)
-├── image_gen.py    ← Hero image generation (DALL-E 3 / Stability AI / placeholder)
-├── video_gen.py    ← Video concept packager (extend with Runway / Kling / Pika)
-├── config.py       ← API keys, model names, and all prompt templates
-├── utils.py        ← Shared helpers: context builder, JSON parser, image saver
-│
-├── assets/         ← Auto-created; generated images saved here
-│
-├── .env.example    ← Environment variable template
+├── app.py
+├── text_gen.py
+├── image_gen.py
+├── video_gen.py
+├── config.py
+├── utils.py
 ├── requirements.txt
+├── .env.example
 └── README.md
 ```
 
 ---
 
-## 🔧 Customisation
+## ⚙️ Prerequisites
 
-### Swap the text model
-Edit `TEXT_MODEL` in `config.py`. Any Anthropic model string works.
-
-### Change prompts
-All prompts live in `config.py` as multi-line string constants. Edit them freely — the rest of the code is prompt-agnostic.
-
-### Use Stability AI instead of DALL-E
-Set `USE_STABILITY=true` in your `.env` and supply a `STABILITY_API_KEY`.
-
-### Add real video rendering
-In `video_gen.py`, replace the `None` return for `video_path` with a call to a video API (Runway ML, Kling, Pika Labs, etc.) and return the local path to the rendered file. `app.py` will automatically render it via `st.video()`.
-
-### Add a new tone
-In `config.py`, add an entry to `TONE_DESCRIPTORS` and add the label to the `selectbox` in `app.py`.
+* Python 3.11 or later
+* OpenRouter API Key
+* OpenAI API Key
 
 ---
 
-## 🔑 API Keys
+## 🔑 Environment Variables
 
-| Key | Where to get it |
-|---|---|
-| `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) |
-| `OPENAI_API_KEY` | [platform.openai.com](https://platform.openai.com) |
-| `STABILITY_API_KEY` | [platform.stability.ai](https://platform.stability.ai) |
+Create a `.env` file in the project root.
 
----
-
-## 🛡️ Notes
-
-- The app runs in **demo mode** (no image key needed) — image cards will show a placeholder and all text assets still generate normally.
-- Generated images are saved to `assets/` with timestamps so nothing is overwritten.
-- No data is stored server-side beyond the local `assets/` folder.
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key
+OPENAI_API_KEY=your_openai_api_key
+```
 
 ---
 
-## 📄 License
+## 📦 Installation
 
-MIT — do whatever you like with it.
+Clone the repository.
+
+```bash
+git clone <your-repository-url>
+cd content_engine
+```
+
+Create a virtual environment.
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment.
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+source .venv/bin/activate
+```
+
+Install the required dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🚀 How It Works
+
+1. Enter the **Product Name**.
+2. Enter the **Target Audience**.
+3. Select the **Brand Tone**.
+4. Click **Generate Campaign**.
+5. The application generates:
+
+   * Campaign Tagline
+   * Blog Introduction
+   * Social Media Posts
+   * Hero Image
+   * Promotional Video
+
+---
+
+## 🤖 AI Models Used
+
+| Task             | Model / Service      |
+| ---------------- | -------------------- |
+| Text Generation  | OpenRouter LLM       |
+| Image Generation | OpenAI GPT Image API |
+| Video Generation | Alibaba Wan 2.6      |
+
+---
+
+## 📸 Outputs
+
+The application generates a complete marketing campaign consisting of:
+
+* Campaign Tagline
+* Blog Introduction
+* Social Media Posts
+* Hero Image
+* Promotional Video
